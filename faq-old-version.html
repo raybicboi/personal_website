@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+  <!-- ======= Nav Bar Section & Head Tag files imported from another file ======= -->
+  <div id="nav-placeholder"></div>
+  <script>
+      $.get("navBarAndHead.html", function(data){
+          $("#nav-placeholder").replaceWith(data);
+      });
+  </script> 
+
+<!-- ======= Frequently Asked Questions Section ======= -->
+  <section id="faq" class="faq section-bg2">
+    <div class="container" data-aos="fade-in">
+      <div class="section-title">
+        <h3>Frequently Asked Questions</h3>
+        <p>For more info, see our <a href="#" class="link" target="_blank">research paper</a> 
+          and <a href="#" class="link" target="_blank">open-source dataset.</a></p>
+      </div>
+
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>What is ClearTerms?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>ClearTerms helps internet users better understand the policies they are implicitly agreeing to.
+            It uses a crowdsourcing model to highlight the terms that users find most valuable.
+            This helps online shoppers be more informed, and <span class="emphasis">helps consumer rights advocates
+            and public policy makers </span>better understand the ecommerce ecosystem.
+          </p>
+        </div>
+      </div>
+<!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>Why did you create ClearTerms?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>Almost every web site has a Terms and Conditions, and they are often too difficult
+            and too painful to read. Researchers Aleecia McDonald and Lorrie Cranor calculated that
+            it would take a person <a href="https://www.theatlantic.com/technology/archive/2012/03/reading-the-privacy-policies-you-encounter-in-a-year-would-take-76-work-days/253851/" class="link" target="_blank">76 work days</a>
+            to read all the Terms & Conditions they encounter in a year. Extrapolated over the U.S. population,
+            it would cost <span class="emphasis">$781 billion dollars.</span> Another infographic from Reddit compares
+            the length of Terms & Conditions from popular sites to <a href="https://old.reddit.com/r/coolguides/comments/g5uarl/nobody_got_time_for_that/" class="link" target="_blank">classic works of literature.</a>
+          </p>
+        </div>
+      </div>
+<!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>What kinds of surprising statements have you found in Terms & Conditions?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p><a href="https://www.facebook.com/terms.php" class="link" target="_blank">Facebook</a> notoriously asks for
+            "permission to use your name, profile picture, and information about your actions with ads and
+            sponsored content." Airbnb is upfront about <a href="https://www.airbnb.com/terms" class="link" target="_blank">making it difficult to delete your account.</a>
+            These sites aren't the only ones - a quick Google search will turn up plenty of good stories about terms like these.
+          </p>
+        </div>
+      </div>
+<!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>How exactly does ClearTerms work?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>ClearTerms uses a Machine Learning model to automatically extract important statements from websites’ T&C documents.
+            To build the model, we collected over 1500+ statements from 27 e-commerce websites, and hired crowd workers to
+            manually label which ones are important to know.
+            <br><br>To make the labeling process easier and more robust, we employed a
+            method called <span class="emphasis">pairwise comparison</span>, in which crowd workers select between two
+            statements at a time. This pairwise comparison method not only makes the labeling process easier for crowd workers
+            but also generates more reliable and accurate results.
+            <br><br>The comparison results are then fed into a <span class="emphasis">statistical model</span>
+            that will produce the ranking of statements, and finally, we used that result to train our model.
+          </p>
+        </div>
+      </div>
+<!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>But everyone has different definitions of “importance,” right?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>Not as much as you’d think. In our research, we found <span class="emphasis">high voting consistency.</span>
+            The voting variances of the most important & least important statements are significantly lower than the middle statements.
+            In other words, <span class="emphasis">the most important and least important statements are highly agreed upon.</span>
+          </p>
+        </div>
+      </div>
+<!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>How was the model trained and tested?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            We trained the model with a Support Vector Machine (SVM) and a Grid Search on parameters C
+            (penalty parameter of the error term), kernel (which kernel to use) and gamma (the kernel coefficient).
+            The model was tested for accuracy via <span class="emphasis">5-fold cross-validation.</span> Ultimately, the model reached 86.8% accuracy,
+            93.2% recall, and 82.0% precision in detecting user-labelled important clauses.
+          </p>
+        </div>
+      </div>
+  <!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>What are some interesting research findings from analyzing Terms and Conditions?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            We used <a href="https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test" class="link" target="_blank">Pearson’s chi-squared test</a>
+            to find the top 20 words most correlated with important statements in our data set. This plot suggests consumers place
+            high value on potential <span class="emphasis">financial loss</span>, with terms like “fee”, “price”, and “damages”.
+            Many words are also related to return/cancellation policies, e,g, “cancel”, “terminate”, and “original”, as are words relating
+            to shipping policies, e.g. “distribute”, “days”, and “shipping”.
+          </p>
+        </div>
+      </div>
+<!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>What statement types do consumers seem to care most about?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            We found that statements relating to <span class="emphasis">product/services</span> - specifically those related to
+            returning, cancellation, and shipping policies - appeared the highest number of times, comprising a third of the
+            top 5 statements. For example, one site stipulates: “Unless you cancel within 14 days from today, you will be
+            automatically charged the full purchase fee ($88.92) 14 days from today and enrolled in our auto-ship program.”
+            <br><br><a href="https://www.neimanmarcus.com/c/Assistance/Privacy-Policy-Terms-of-Use-cat33940739" class="link" target="_blank">
+            Neiman Marcus</a> informs consumers of their “...ongoing commitment to ensure that your shopping experience...is protected,
+            we will prosecute all unauthorized or fraudulent transactions to the fullest extent allowed by law.”
+            This statement type frequency suggests that consumers place a high value on <span class="emphasis">money-related issues</span>,
+            which corresponds to our chi-square test results in the previous section.
+            <br><br> The second most frequent statement type relates to the company’s ability to <span class="emphasis">control content
+            generated and uploaded by the user.</span> For example, <a href="https://sgsg.samsung.com/service/agreement.php" class="link" target="_blank">Samsung</a>
+            states their right that “Any Submission may be used by Samsung without restriction for any purpose whatsoever, including,
+            without limitation, reproduction, disclosure, transmission, publication, broadcast or posting...”. Other high ranking statements
+            refer to the company’s right to delete user content, or to even fine users for bad reviews on review websites.
+          </p>
+        </div>
+      </div>
+  <!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>What are the limitations of ClearTerms’ method for analyzing Terms and Conditions?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            We're not perfect! Some of our limitations include:
+            <ul>
+              <li>The model only works for <span class="emphasis">e-commerce</span> sites right now.</li>
+              <li>Though pairwise comparison lowers the cognitive load for crowd workers, pulling individual
+                statements out from the full document may lose some context.</li>
+              <li>Terms and Conditions are filled with complex jargon that is sometimes hard to understand
+                in the first place. It's hard for people to understand a <span class="emphasis">"worldwide license"
+                to use content you generate"</span> or phrases like <span class="emphasis">"in perpetutity."</span>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+  <!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch">
+        <div class="col-lg-5">
+          <i class="bx bx-help-circle"></i>
+          <h4>How is ClearTerms different from TOS;DR?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            Much like ClearTerms, <a href="https://tosdr.org/" class="link" target="_blank">TOS;DR</a> aims to analyze
+            the terms of service and privacy policies of major Internet sites and services. While TOS;DR relies fully
+            on crowd workers to do this, ClearTerms uses a natural language model to rank important statements.
+            There's pros and cons to both, but this allows us to <span class="emphasis">analyze more policies</span>,
+            and makes it easier for us to keep our analyses <span class="emphasis">up to date</span> as web sites
+            update their Terms and Conditions.
+            <br><br>We're not the only ones using ML to look at online activity! There are more projects going on
+            at <a href="https://www.isri.cmu.edu/" class="link" target="_blank">CMU</a>, including those in
+            <a href="https://www.isri.cmu.edu/people/core-faculty/sadeh-norman.html" class="link" target="_blank">Norman Sadeh's</a> lab.
+          </p>
+        </div>
+      </div>
+<!-- End F.A.Q Item-->
+
+    <div class="row faq-item d-flex align-items-stretch">
+      <div class="col-lg-5">
+        <i class="bx bx-help-circle"></i>
+        <h4>How can I help with ClearTerms?</h4>
+      </div>
+      <div class="col-lg-7">
+        <p>
+          Volunteers can help by participating in <span class="emphasis">pairwise comparison</span> -
+          by comparing individual statements on <a href="crowd.html">this page</a>.
+          <br><br>If you have skills in machine learning or data science, you can check out our open-source data
+          and look for better ways of improving our models. For example, some Terms and Conditions are highly similar
+          in text, probably because of templates. We're also looking into classifying the
+          <span class="emphasis">category</span> of the statement too. If you have any ideas, let us know!
+        </p>
+      </div>
+    </div>
+<!-- End F.A.Q Item-->
+
+    <div class="row faq-item d-flex align-items-stretch">
+      <div class="col-lg-5">
+        <i class="bx bx-help-circle"></i>
+        <h4>Who is the team behind ClearTerms?</h4>
+      </div>
+      <div class="col-lg-7">
+        <p>
+          We are researchers and designers at Carnegie Mellon University that do work in usable privacy and security.
+          Check out <a href="http://privacygrade.org" target="_blank">related work</a> by our <a href="https://github.com/CMUChimpsLab" target="_blank">research group</a>.
+          <br><br>Research Lab Lead: <a href="http://www.cs.cmu.edu/~jasonh/" target="_blank">Jason Hong</a>
+          <br>ML Model: Bruce Liu
+          <br>Website Design & Implementation: <a href="https://sskellner.github.io/portfolio/" target="_blank">Stacy Kellner</a>
+          <br><br>Thanks to Jonathan Dinu, Jineet Doshi, Brandon Jiang, Siddharth Nair, Alex Sciuto, and Sarah Shy
+          for looking at ways of improving the machine learning models.
+          <br><br>Thanks to Annabel Sun, Shawn Hanna, Arpita Agarwal, Lu Chen, Jennifer Kong, and Rosie Sun for
+          doing the initial data collection and building out early versions of ClearTerms.
+          <br><br>Thanks to Chaiwut Chaianuchittrakul and Angelia for doing the early investigations into this work.
+        </p>
+      </div>
+    </div>
+<!-- End F.A.Q Item-->
+
+    </div>
+  </section><!-- End Frequently Asked Questions Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container footer-top">
+
+        <div class="row justify-content-left">
+          <div class="col-lg-4">
+            <h3>ClearTerms</h3>
+            <div><br><a href="index.html#about">About Us</a></div>
+            <div><a href="#">Frequently Asked Questions</a></div>
+            <div><a href="crowd.html">Help Rank Terms & Conditions</a></div>
+          </div>
+        </div>
+
+        <!-- <div class="row social-links">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div> -->
+
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        <!-- &copy; Copyright <strong><span>ClearTerms</span></strong>. All Rights Reserved -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+<!-- FIREBASE -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+  <!-- Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+<!-- END FIREBASE -->
+
+</body>
+
+</html>

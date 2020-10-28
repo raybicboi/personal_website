@@ -1,0 +1,1106 @@
+/*
+some elements adapted from https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+/* Theme Colors */
+/* #223C5D - navy header, footer, buttons, headers, bold */
+/* #E8FFFD - light teal background/splash */
+/* #27D3D2 - teal links */
+/* #E94B64 - coral accent */
+/* #737373 - gray body text */
+/* #009184 - dark green heading*/
+/* #abe5e0 - teal background*/
+/* #E5E5E5 - light grey body text*/
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #737373;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  color: #223C5D;
+  font-weight: bold;
+}
+
+a {
+  color: #27D3D2;
+}
+
+a:hover {
+  color: #E94B64;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-get-started {
+  color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 8px 35px 10px 35px;
+  border: 2px solid #223C5D;
+  transition: all ease-in-out 0.2s;
+  display: inline-block;
+  background: #223C5D;
+}
+
+.btn-get-started:hover {
+  background: transparent;
+  color: #223C5D;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  background: #284864;
+  color: #fff;
+  transition: display 0.3s ease-in-out;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.back-to-top:hover {
+  color: #fff;
+  background: #E94B64;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 80px;
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 16px;
+  background: #223C5D;
+}
+
+#header .logo h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 10px 0 2px 0;
+  line-height: 1;
+  letter-spacing: 3px;
+  /* text-transform: uppercase; */
+}
+
+#header .logo h1 a, #header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .logo h1 a span, #header .logo h1 a:hover span {
+  color: #E94B64;
+}
+
+#header .logo h6 {
+  font-size: 11px;
+  color: #adc7de;
+  font-style: oblique;
+  font-weight: normal;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 1;     /* Modification for search bar functionaility (for hyperlinks to work) */
+}
+
+.nav-menu .btn-search {
+  background: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-menu .input-search {
+  background: #fff;
+  border: 2px solid #fff;
+  padding: 10px;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  float: left;
+  margin-left: 20px;
+}
+
+
+.nav-menu ul {
+  border-radius: 6px;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #adc7de;
+  padding: 10px 15px;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-nav-toggle i {
+  color: #E94B64;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: #fff;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-nav .btn-search {
+  background: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid #737373;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.mobile-nav .input-search {
+  background: #fff;
+  border: 2px solid #737373;
+  padding: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  max-width: 300px;
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #213b52;
+  padding: 10px 20px;
+  font-weight: 500;
+  outline: none;
+  transition: 0.3s;
+}
+
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(18, 33, 46, 0.6);
+  overflow: hidden;
+  display: none;
+  transition: ease-in-out 0.2s;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  padding: 0 0 0 0;
+  background: #E8FFFD;
+}
+
+#hero h1 {
+  margin: 0 0 15px 0;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #223C5D;
+}
+
+#hero h2 {
+  color: #969696;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+#hero h2 .emphasis {
+  color: #223C5D;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+@media (max-width: 991px) {
+  #hero {
+    -moz-text-align-last: center;
+    text-align: center;
+    padding: 10px;
+  }
+  #hero h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero h2 .emphasis{
+    color: #223C5D;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero .hero-img img {
+    width: 80%;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    -moz-text-align-last: center;
+    text-align: center;
+    padding: 10px;
+  }
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero h2 .emphasis{
+    color: #223C5D;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero .hero-img img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero .hero-img img {
+    width: 80%;
+    margin-top: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg1 {
+  background: #fff;
+}
+
+.section-bg2 {
+  background: #E8FFFD;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h3 {
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  /* padding-bottom: 20px; */
+  position: relative;
+  color: #213b52;
+}
+
+.section-title p {
+  margin-bottom: 0;
+} */
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about {
+  transition: 0.6s;
+}
+
+.about .content {
+  padding: 30px 0;
+}
+
+.about .content h3 {
+  font-weight: 700;
+  font-size: 34px;
+  color: #213b52;
+}
+
+.about .content h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 25px 0 10px 0;
+  color: #213b52;
+}
+
+.about .content p {
+  font-size: 15px;
+  margin-bottom: 10;
+}
+
+.about .content p .emphasis{
+  font-weight: bold;
+  color: #223C5D;
+}
+
+.about .image {
+  background: url("../img/how-does-it-work.png") center center no-repeat;
+  background-size: contain;
+  min-height: 400px;
+}
+
+@media (max-width: 991px) {
+  .about .content{
+    -moz-text-align-last: center;
+    padding: 30px;
+  }
+  .about .content h3 {
+    font-size: 28px;
+    text-align:center;
+  }
+  .about .content h4 {
+    font-size: 16px;
+  }
+  .about .content p {
+    font-size: 15px;
+  }
+  .about .content p .emphasis{
+    font-size: 15px;
+    color: #223C5D;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .content {
+    -moz-text-align-last: center;
+    text-align: center;
+    padding: 50px;
+  }
+  .about .content h3 {
+    font-size: 28px;
+  }
+  .about .content h4 {
+    font-size: 16px;
+  }
+  .about .content p {
+    font-size: 14px;
+  }
+  .about .content p .emphasis{
+    font-size: 14px;
+    color: #223C5D;
+  }
+}
+
+/*--------------------------------------------------------------
+# Slider
+--------------------------------------------------------------*/
+.slick-item img {
+  /* opacity: 50%; */
+  max-width: 80%;
+}
+
+.centermode-slick {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+}
+
+.centermode-slick.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
+
+.services {
+  padding-bottom: 40px;
+}
+
+
+/*--------------------------------------------------------------
+# Browse Companies
+--------------------------------------------------------------*/
+.browse p {
+  font-size: 15px;
+  margin-bottom: 10;
+  color: #969696;
+}
+
+.browse .company-row {
+  margin: 20px;
+  padding: 10px 20px;
+  /* border-bottom: 1px solid #dde8f1; */
+}
+
+.browse .company-row .company {
+  max-height: 100%;
+}
+
+.browse .company-row .company img {
+  margin-left: 20px;
+  margin-right: 20px;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.browse .company-row .company img:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+
+.browse .company-row i {
+  color: #9bbbd7;
+  font-size: 20px;
+  float: left;
+  line-height: 0;
+  padding: 13px 0 0 0;
+  margin: 0;
+}
+
+.browse .company-row h4 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  margin: 0 0 10px 28px;
+  color: #213b52;
+}
+
+.browse .company-row p {
+  font-size: 15px;
+}
+.browse .company-row p .emphasis{
+  font-weight: bold;
+  color: #223C5D;
+}
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+
+#faq .container {
+  width: 70%;
+  min-width: 780px;
+}
+
+.emphasis{
+  font-weight: bold;
+  color: #223C5D;
+} 
+
+.accordion {
+  background-color: #FFFFFF;
+  color:#223C5D;
+  cursor: pointer;
+  padding: 3%;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.bx-help-circle {
+  color: #9bbbd7;
+  font-size: 20px;
+  line-height: 0;
+  padding-right: 2%;
+  margin: 0;
+}
+
+.active, .accordion:hover {
+  background-color: #abe5e0;
+}
+
+.panel {
+  padding: 5% 10%;
+  background-color: #FFFFFF;
+  display: none;
+  overflow: hidden;
+  margin-bottom: 1%;
+}
+
+.accordion:after {
+  content: '\02795'; 
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.active:after {
+  content: "\2796"; 
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  /* height: 200px; */
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 16px;
+  background: #223C5D;
+}
+
+#footer .footer-top {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  padding: 30px 15px;
+}
+
+#footer .footer-top h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#footer .footer-top a {
+  font-size: 15px;
+  color: #adc7de;
+  margin: 30px 0 0 0;
+  /* padding: 0; */
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+#footer a:hover, #footer .active > a, #footer li:hover > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#footer .footer-bottom {
+  border-top: 1px solid #1a2e40;
+  z-index: 2;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#footer .copyright {
+  text-align: center;
+  float: left;
+}
+
+#footer .credits {
+  float: right;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  #footer .copyright, #footer .credits {
+    padding: 5px;
+    float: none;
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------------------
+# Individual Company Page (Wen Shan's Code) 
+--------------------------------------------------------------*/
+#individual-company {
+  background-color: #E8FFFD;
+}
+
+#company-info {
+  height: 360px;
+}
+
+#company-logo {
+  float: left;
+  width: 48%;
+  margin-top: 5%;
+  text-align: right;
+}
+
+#company-desc {
+  float: right;
+  margin-top: 4%;
+  width: 48%;
+}
+
+
+#individual-company h1 {
+  text-transform: uppercase;
+  font-size: 34px;
+  padding-top: 30px;
+  margin-bottom: 0px;
+}
+
+#term-background {
+  background: #abe5e0;
+}
+
+#term-container {
+  margin: 0px 40px;
+  overflow: auto;
+}
+
+@media (min-width:1180px) {
+  #term-details {
+    width: 65%;
+  }
+
+  #term-details th {
+    text-transform: uppercase;
+    padding: 50px 10px;
+    width: 30%;
+    color: #009184;
+    font-size: 18px;
+  }
+
+  #term-details td {
+    padding: 30px 15px 30px 25px;
+    width: 70%;
+    color: #223C5D;
+    font-size: 16px;
+  }
+
+  table {
+    float: left;
+  }
+
+  #participate {
+    width: 26%;
+    margin: 0% 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 45px;
+    float: right;
+    color: #009184;
+    font-size: 16px;
+    background: #E8FFFD;
+    border-radius: 30px;
+  }
+
+  #participate h2 {
+    color: #009184;
+    font-size: 24px;
+  }
+
+  #participate .btn-get-started {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:1179px) {
+  #term-details {
+    width: 100%;
+  }
+
+  #term-details th {
+    text-transform: uppercase;
+    padding: 50px 10px;
+    width: 30%;
+    color: #009184;
+    font-size: 18px;
+  }
+
+  #term-details td {
+    padding: 30px 15px 30px 25px;
+    width: 70%;
+    color: #223C5D;
+    font-size: 16px;
+  }
+
+
+  #participate {
+    width: 70%;
+    margin: 3% auto;
+    margin-top: 3%;
+    padding: 45px;
+    color: #009184;
+    font-size: 16px;
+    background: #E8FFFD;
+    border-radius: 30px;
+  }
+
+  #participate h2 {
+    color: #009184;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #participate .btn-get-started {
+    width: 280px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+
+#term-content {
+  width: 47%;
+  margin: 0px auto;
+  padding: 60px;
+  color: #E5E5E5;
+  line-height: 1.6em;
+  background: #FFFFFF;
+}
+
+#term-content .emphasis {
+  color: #009184;
+  font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+# Crowdsourcing (Wen Shan & Raymond's Code)
+--------------------------------------------------------------*/
+ 
+/* .crowd {
+  padding: 30px 0;
+} */
+ 
+.survey {
+  display: none;
+  margin: 0px auto;
+  border-radius: 30px;
+  padding: 30px 0;
+  /* border-style: solid;
+  /* border-color: #223C5D; */
+  /* transition: ease-in-out 0.3s; */
+}
+ 
+#crowd-inner {
+  border-radius: 30px;
+  padding: 30px 0;
+  font-size: 18px;
+}
+ 
+ 
+.statement {
+  padding: 30px;
+}
+ 
+.statement-inner {
+  margin: 10px auto;
+  border-radius: 30px;
+  padding: 20px 20px;
+  transition: ease-in-out 0.07s;
+}
+
+
+#crowd-inner .btn-submit {
+  color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px 35px 10px 35px;
+  width: 150px !important;
+  border: 2px solid #223C5D;
+  transition: all ease-in-out 0.2s;
+  display: inline-block;
+  background: #223C5D;
+}
+
+#crowd-inner .btn-submit:hover {
+  background: transparent;
+  color: #223C5D;
+  border: 2px solid #223C5D;
+  text-decoration: none;
+}
+
+.statement-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 10%;
+  font-weight: bold;
+}
+
+#statement-inner1:hover, #statement-inner2:hover, #statement-inner3:hover {
+  text-decoration: none;
+  border: solid #009184 2px;
+  color: #009184 !important;
+}
+
+
+#statement-inner1, #statement-inner2, #statement-inner3 {
+  width: 24%;
+  padding: 30px;
+  float: left;
+  background: #FFFFFF;
+  border-radius: 30px;
+  color: #737373;
+  font-size: 16px;
+  border: solid #737373 2px;
+}
+
+#statement-inner1 {
+  margin: 10px 40px 0px 100px;
+}
+
+#statement-inner2 {
+  margin: 10px 10px 0px 10px; 
+}
+
+#statement-inner3 {
+  margin: 10px 100px 0px 40px; 
+}
+
+#statement-inner2 {
+  float: right;
+}
+
+#crowd-form1 input, #crowd-form2 input, #crowd-form3 input {
+  width: 80%;
+  padding: 15px;
+  border: 0px;
+}
+
+/*--------------------------------------------------------------
+# Add a Company (Wen Shan's Code)
+--------------------------------------------------------------*/
+#add-company {
+  border-radius: 30px;
+}
+
+#add-company h4{
+  font-size: 18px;
+  text-align: center;
+  color: #737373 !important;
+  line-height: 1.4em;
+}
+
+#add-company-desciption {
+  margin: 90px;
+}
+
+#add-company-form input {
+  width: 100%;
+  padding: 15px 15px 15px 15px;
+  border: 0px;
+}
+
+#add-company-form .btn-submit {
+  color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px 35px 10px 35px;
+  width: 150px;
+  margin: 20px 400px;
+  border: 2px solid #223C5D;
+  transition: all ease-in-out 0.2s;
+  display: inline-block;
+  background: #223C5D;
+}
+
+textarea {
+  height: 400px;
+  border: none;
+  padding: 30px 30px 30px 30px;
+  width: 100%;
+}
+
+#add-company-form .btn-submit:hover {
+  background: transparent;
+  color: #223C5D;
+  text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------
+# About Us (Wen Shan's Code)
+--------------------------------------------------------------*/
+#about-us {
+  background-color: #E8FFFD;
+}
+
+#team-info, #contact-us {
+  width: 55%;
+  margin: 10px auto;
+}
+
+#team-info h3, #contact-us h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 34px;
+}
+
+#contact-us{
+  width: 470px;
+  background: #abe5e0;
+  border: solid #abe5e0 2px;
+  border-radius: 30px;
+}
+
+#contact-us label{
+  text-align: left;
+  margin-left: 15%;
+  color: #223C5D;
+}
+
+#contact-us h4{
+  text-align: center;
+}
+
+
+#contact-us input{
+  margin-top: 2%;
+  margin-bottom: 10%;
+  border: none;
+  height: 35px;
+  width: 150%;
+  padding: 4%;
+}
+
+#contact-us #msg{
+  height: 200px;
+  border: none;
+  padding: 3%;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  width: 156%;
+}
+
+#contact-us span{
+  color: red;
+}
+
+#contact-us .btn-submit {
+  color: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 5px 35px 5px 35px;
+  width: 150px;
+  height: 45px;
+  margin-left: 150px;
+  border: 2px solid #223C5D;
+  transition: all ease-in-out 0.2s;
+  display: inline-block;
+  background: #223C5D;
+}
+
+#contact-us .btn-submit:hover {
+  background: transparent;
+  color: #223C5D;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Search Bar Table (Wen Shan & Raymond's Code)
+--------------------------------------------------------------*/
+  
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  box-sizing: border-box;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
