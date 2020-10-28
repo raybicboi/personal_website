@@ -130,7 +130,6 @@ a:hover {
   margin: 0;
   padding: 0;
   list-style: none;
-  z-index: 1;     /* Modification for search bar functionaility (for hyperlinks to work) */
 }
 
 .nav-menu .btn-search {
@@ -152,7 +151,6 @@ a:hover {
   margin-left: 20px;
 }
 
-
 .nav-menu ul {
   border-radius: 6px;
 }
@@ -170,6 +168,7 @@ a:hover {
   color: #FFFFFF;
   text-decoration: none;
 }
+
 
 
 /* Mobile Navigation */
@@ -272,7 +271,6 @@ a:hover {
 .mobile-nav-active .mobile-nav-toggle i {
   color: #fff;
 }
-
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -404,10 +402,6 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about {
-  transition: 0.6s;
-}
-
 .about .content {
   padding: 30px 0;
 }
@@ -568,60 +562,46 @@ section {
 # Frequently Asked Questions
 --------------------------------------------------------------*/
 
-#faq .container {
-  width: 70%;
-  min-width: 780px;
+.faq p, ul{
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #969696;
 }
 
-.emphasis{
-  font-weight: bold;
-  color: #223C5D;
-} 
-
-.accordion {
-  background-color: #FFFFFF;
-  color:#223C5D;
-  cursor: pointer;
-  padding: 3%;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
+.faq li {
+  margin-bottom: 10px;
 }
 
-.bx-help-circle {
+.faq .faq-item {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #dde8f1;
+}
+
+.faq .faq-item i {
   color: #9bbbd7;
   font-size: 20px;
+  float: left;
   line-height: 0;
-  padding-right: 2%;
+  padding: 13px 0 0 0;
   margin: 0;
 }
 
-.active, .accordion:hover {
-  background-color: #abe5e0;
+.faq .faq-item h4 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  margin: 0 0 10px 28px;
+  color: #213b52;
 }
 
-.panel {
-  padding: 5% 10%;
-  background-color: #FFFFFF;
-  display: none;
-  overflow: hidden;
-  margin-bottom: 1%;
+.faq .faq-item p {
+  font-size: 15px;
 }
-
-.accordion:after {
-  content: '\02795'; 
-  font-size: 13px;
-  float: right;
-  margin-left: 5px;
-  margin-right: 10px;
+.faq .faq-item p .emphasis{
+  font-weight: bold;
+  color: #223C5D;
 }
-
-.active:after {
-  content: "\2796"; 
-}
-
 
 /*--------------------------------------------------------------
 # Footer
@@ -706,6 +686,13 @@ section {
   height: 360px;
 }
 
+/* #company-logo {
+  margin-top: 7%;
+  margin-left: 25%;
+  min-width: 200px;
+} */
+
+
 #company-logo {
   float: left;
   width: 48%;
@@ -719,7 +706,28 @@ section {
   width: 48%;
 }
 
+/*
+#company-info h1 {
+  position: absolute;
+  font-size: 50px;
+  top: 45%;
+  left: 50%;
+  text-transform: none !important; 
+}
 
+#company-info h2 {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+}
+
+#company-info p {
+  position: absolute;
+  font-size: 20px;
+  top: 71%;
+  left: 50%;
+}
+*/
 #individual-company h1 {
   text-transform: uppercase;
   font-size: 34px;
@@ -730,106 +738,48 @@ section {
 #term-background {
   background: #abe5e0;
 }
-
 #term-container {
   margin: 0px 40px;
   overflow: auto;
 }
-
-@media (min-width:1180px) {
-  #term-details {
-    width: 65%;
-  }
-
-  #term-details th {
-    text-transform: uppercase;
-    padding: 50px 10px;
-    width: 30%;
-    color: #009184;
-    font-size: 18px;
-  }
-
-  #term-details td {
-    padding: 30px 15px 30px 25px;
-    width: 70%;
-    color: #223C5D;
-    font-size: 16px;
-  }
-
-  table {
-    float: left;
-  }
-
-  #participate {
-    width: 26%;
-    margin: 0% 3%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    padding: 45px;
-    float: right;
-    color: #009184;
-    font-size: 16px;
-    background: #E8FFFD;
-    border-radius: 30px;
-  }
-
-  #participate h2 {
-    color: #009184;
-    font-size: 24px;
-  }
-
-  #participate .btn-get-started {
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-  }
+#term-details {
+  width: 65%;
+}
+#term-details th {
+  text-transform: uppercase;
+  padding: 50px 10px;
+  width: 35%;
+  color: #009184;
+  font-size: 18px;
 }
 
-@media (max-width:1179px) {
-  #term-details {
-    width: 100%;
-  }
-
-  #term-details th {
-    text-transform: uppercase;
-    padding: 50px 10px;
-    width: 30%;
-    color: #009184;
-    font-size: 18px;
-  }
-
-  #term-details td {
-    padding: 30px 15px 30px 25px;
-    width: 70%;
-    color: #223C5D;
-    font-size: 16px;
-  }
-
-
-  #participate {
-    width: 70%;
-    margin: 3% auto;
-    margin-top: 3%;
-    padding: 45px;
-    color: #009184;
-    font-size: 16px;
-    background: #E8FFFD;
-    border-radius: 30px;
-  }
-
-  #participate h2 {
-    color: #009184;
-    font-size: 24px;
-    text-align: center;
-  }
-
-  #participate .btn-get-started {
-    width: 280px;
-    text-align: center;
-    font-size: 14px;
-  }
+#term-details td {
+  padding: 30px 15px 30px 25px;
+  width: 65%;
+  color: #223C5D;
+  font-size: 16px;
 }
 
+table {
+  float: left;
+}
+
+#participate {
+  width: 26%;
+  margin: 0% 3%;
+  margin-top: 3%;
+  padding: 45px;
+  float: right;
+  color: #009184;
+  font-size: 18px;
+  background: #E8FFFD;
+  border-radius: 30px;
+}
+
+#participate h2 {
+  color: #009184;
+  font-size: 24px;
+}
 
 #term-content {
   width: 47%;
@@ -881,8 +831,7 @@ section {
   transition: ease-in-out 0.07s;
 }
 
-
-#crowd-inner .btn-submit {
+.btn-submit {
   color: #fff;
   border-radius: 10px;
   font-size: 18px;
@@ -894,55 +843,44 @@ section {
   background: #223C5D;
 }
 
-#crowd-inner .btn-submit:hover {
+.btn-submit:hover {
   background: transparent;
   color: #223C5D;
-  border: 2px solid #223C5D;
   text-decoration: none;
 }
 
-.statement-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 1.2em;
-  margin-bottom: 10%;
-  font-weight: bold;
-}
-
-#statement-inner1:hover, #statement-inner2:hover, #statement-inner3:hover {
+#statement-inner1:hover, #statement-inner2:hover {
   text-decoration: none;
   border: solid #009184 2px;
-  color: #009184 !important;
 }
 
-
-#statement-inner1, #statement-inner2, #statement-inner3 {
-  width: 24%;
+#statement-inner1, #statement-inner2 {
+  width: 30%;
   padding: 30px;
   float: left;
   background: #FFFFFF;
+  border: solid #FFFFFF 2px;
   border-radius: 30px;
-  color: #737373;
+  color: #009184;
   font-size: 16px;
-  border: solid #737373 2px;
 }
 
 #statement-inner1 {
-  margin: 10px 40px 0px 100px;
+  margin: 10px 40px 10px 170px;
 }
-
 #statement-inner2 {
-  margin: 10px 10px 0px 10px; 
+  margin: 10px 170px 10px 60px; 
 }
 
-#statement-inner3 {
-  margin: 10px 100px 0px 40px; 
+#statement-inner1 h5, #statement-inner2 h5 {
+  color: #009184;
 }
 
 #statement-inner2 {
   float: right;
 }
 
-#crowd-form1 input, #crowd-form2 input, #crowd-form3 input {
+#crowd-form1 input, #crowd-form2 input {
   width: 80%;
   padding: 15px;
   border: 0px;
@@ -996,111 +934,4 @@ textarea {
   background: transparent;
   color: #223C5D;
   text-decoration: none;
-}
-
-
-/*--------------------------------------------------------------
-# About Us (Wen Shan's Code)
---------------------------------------------------------------*/
-#about-us {
-  background-color: #E8FFFD;
-}
-
-#team-info, #contact-us {
-  width: 55%;
-  margin: 10px auto;
-}
-
-#team-info h3, #contact-us h3 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-size: 34px;
-}
-
-#contact-us{
-  width: 470px;
-  background: #abe5e0;
-  border: solid #abe5e0 2px;
-  border-radius: 30px;
-}
-
-#contact-us label{
-  text-align: left;
-  margin-left: 15%;
-  color: #223C5D;
-}
-
-#contact-us h4{
-  text-align: center;
-}
-
-
-#contact-us input{
-  margin-top: 2%;
-  margin-bottom: 10%;
-  border: none;
-  height: 35px;
-  width: 150%;
-  padding: 4%;
-}
-
-#contact-us #msg{
-  height: 200px;
-  border: none;
-  padding: 3%;
-  margin-top: 2%;
-  margin-bottom: 10%;
-  width: 156%;
-}
-
-#contact-us span{
-  color: red;
-}
-
-#contact-us .btn-submit {
-  color: #fff;
-  border-radius: 10px;
-  font-size: 16px;
-  padding: 5px 35px 5px 35px;
-  width: 150px;
-  height: 45px;
-  margin-left: 150px;
-  border: 2px solid #223C5D;
-  transition: all ease-in-out 0.2s;
-  display: inline-block;
-  background: #223C5D;
-}
-
-#contact-us .btn-submit:hover {
-  background: transparent;
-  color: #223C5D;
-  text-decoration: none;
-}
-
-/*--------------------------------------------------------------
-# Search Bar Table (Wen Shan & Raymond's Code)
---------------------------------------------------------------*/
-  
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: none;
-  box-sizing: border-box;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
 }

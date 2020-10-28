@@ -1,19 +1,3 @@
-// Accordion
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-
 // slick stuff
     $(document).ready(function(){
       // $('.single-item').slick();
@@ -181,91 +165,66 @@ var database = firebase.database();
 function statement1() {
   var crowdForm1 = document.getElementById("crowd-form1");
   var crowdForm2 = document.getElementById("crowd-form2");
-  var crowdForm3 = document.getElementById("crowd-form3");
-  var statement = document.getElementById("statement-inner1");
   if (crowdForm1.style.display === "block") {
     crowdForm1.style.display = "none";
-    statement.scrollIntoView({block:"center", behavior: 'smooth'});
   } else {
     crowdForm2.style.display = "none";
-    crowdForm3.style.display = "none";
     crowdForm1.style.display = "block";
-    crowdForm1.scrollIntoView({block:"end", behavior: 'smooth'});
   }
 }
  
 function statement2() {
   var crowdForm1 = document.getElementById("crowd-form1");
   var crowdForm2 = document.getElementById("crowd-form2");
-  var crowdForm3 = document.getElementById("crowd-form3");
-  var statement = document.getElementById("statement-inner2");
   if (crowdForm2.style.display === "block") {
     crowdForm2.style.display = "none";
-    statement.scrollIntoView({block:"center", behavior: 'smooth'});
   } else {
     crowdForm1.style.display = "none";
-    crowdForm3.style.display = "none";
     crowdForm2.style.display = "block";
-    crowdForm2.scrollIntoView({block:"end", behavior: 'smooth'});
   }
 }
 
-function statement3() {
-  var crowdForm1 = document.getElementById("crowd-form1");
-  var crowdForm2 = document.getElementById("crowd-form2");
-  var crowdForm3 = document.getElementById("crowd-form3");
-  var statement = document.getElementById("statement-inner3");
-  if (crowdForm3.style.display === "block") {
-    crowdForm3.style.display = "none";
-    statement.scrollIntoView({block:"center", behavior: 'smooth'});
-  } else {
-    crowdForm1.style.display = "none";
-    crowdForm2.style.display = "none";
-    crowdForm3.style.display = "block";
-    crowdForm3.scrollIntoView({block:"end", behavior: 'smooth'});
-  }
-}
+// search feature
+// const charactersList = document.getElementById('charactersList');
+// const searchBar = document.getElementById('searchBar');
+// let hpCharacters = [];
 
-// function for search functionality
-function searchCompany() {
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName("li");
+// searchBar.addEventListener('keyup', (e) => {
+//     const searchString = e.target.value.toLowerCase();
 
-  input.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13) {
-          ul.style.display = "block";
+//     const filteredCharacters = hpCharacters.filter((character) => {
+//         return (
+//             character.name.toLowerCase().includes(searchString) ||
+//             character.house.toLowerCase().includes(searchString)
+//         );
+//     });
+//     displayCharacters(filteredCharacters);
+// });
 
-          for (i = 0; i < li.length; i++) {
-              a = li[i].getElementsByTagName("a")[0];
-              txtValue = a.textContent || a.innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                  li[i].style.display = "";
-              } else {
-                  li[i].style.display = "none";
-              }
-          }
-      }
-  });
-}
+// const loadCharacters = async () => {
+//     try {
+//         const res = await fetch('https://hp-api.herokuapp.com/api/characters');
+//         hpCharacters = await res.json();
+//         displayCharacters(hpCharacters);
+//     } catch (err) {
+//         console.error(err);
+//     }
+// };
 
-function searchCompanyEnter() {
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName("li");
-  ul.style.display = "block";
+// const displayCharacters = (characters) => {
+//     const htmlString = characters
+//         .map((character) => {
+//             return `
+//             <li class="character">
+//                 <h2>${character.name}</h2>
+//                 <p>House: ${character.house}</p>
+//                 <img src="${character.image}"></img>
+//             </li>
+//         `;
+//         })
+//         .join('');
+//     charactersList.innerHTML = htmlString;
+// };
 
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
+// loadCharacters();
+

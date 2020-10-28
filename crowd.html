@@ -1,49 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ClearTerms</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- FontAwesome (for glyphicons) -->
+  <script src="https://kit.fontawesome.com/18834a1269.js" crossorigin="anonymous"></script>
+
+  <!-- =======================================================
+  * Template Name: Bocor - v2.0.0
+  * Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+  <!--Jquery link-->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function(){
+        $("#statement-inner1").click(function(){
+        $("#crowd-form1").slideDown("slow");
+        });
+      });
+      $(document).ready(function(){
+        $("#statement-inner2").click(function(){
+        $("#crowd-form2").slideDown("slow");
+        });
+      });
+  </script> -->
+
+</head>
+
 <body>
 
-  <!-- ======= Nav Bar Section & Head Tag files imported from another file ======= -->
-  <div id="nav-placeholder"></div>
-  <script>
-      $.get("navBarAndHead.html", function(data){
-          $("#nav-placeholder").replaceWith(data);
-      });
-  </script> 
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html">ClearTerms<span></span></a></h1>
+        <h6>simplifying terms & conditions</h6>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <!-- <li class="active"><a href="#header">Home</a></li> -->
+          <li><a href="browse.html">Browse Companies</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <!-- <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li> -->
+
+          <!-- <li class="get-started"><a href="#about">Get Started</a></li> -->
+          <!-- <li class="form-inline" action="/action_page.php">
+            <input class="form-control" type="text" placeholder="find a company...">
+            <button class="btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </li> -->
+          <li class="col-xs-3">
+          <div class="input-group mb-3">
+            <input class="form-control input-search" type="text" placeholder="find a company...">
+              <div class="input-group-append">
+                <button href="browse.html" class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
+              </div>
+          </div>
+        </li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
 
   <!-- ======= Section ======= -->
     <section class="section section-bg1">
       <div class="container section-bg2" id="crowd-inner">
         <div class="section-title">
           <h3 data-aos="fade-in">Participate</h3>
-          <p1>Help us improve our ML model by ranking some terms & conditions.</p1><br><br><br>
-          <p1>Click the statement that you think is more important for you, 
+          <p1>Help us improve our ML model by ranking some terms & conditions.</p1><br><br><br><br><br>
+          <p1>Choose the statement that you think is more important for you, 
               a customer browsing the website, to know.</p1>
           </br>
           <div class="statement row d-flex align-items-stretch">
             <div id="statement-inner1" onclick="statement1()">
-              <p class="statement-title">Statement 1</p>
-              </br>
+              <h5>Statement 1</h5>
               <p>GeekBuying will be in charge of all the repair handling
                   fees and non-artificial defective component replacement
                   charges (this free repair rule does not apply to
                   motherboard & screen).</p>
-              </br>
-              <p class = "statement-Citation"> - From GeekBuying </p>
             </div>
             <div id="statement-inner2" onclick="statement2()">
-              <p class="statement-title">Statement 2</p>
-              </br>
+              <h5>Statement 2</h5>
               <p>Geekbuying sincerely suggests every respected customer
                   to read the following regulations carefully 
                   before purchase.</p>
-              </br>
-              <p class = "statement-Citation"> - From GeekBuying </p>
-            </div>
-            <div id="statement-inner3" onclick="statement3()">
-              <p class="statement-title">Statement 3</p>
-              </br>
-              <p>Statement 1 and statement 2 are equally important.</p>
             </div>
           </div>
           </br>
@@ -54,11 +147,6 @@
           </div>
           <div id="crowd-form2" class="survey col-md-8 section-bg2">
             <p>Why did you choose Statement 2?</p><br><br>
-            <input type="text" placeholder="write a sentence..."><br><br>
-            <input type="submit" class="btn-submit" value="Submit">
-          </div>
-          <div id="crowd-form3" class="survey col-md-8 section-bg2">
-            <p>Why did you choose Statement 3?</p><br><br>
             <input type="text" placeholder="write a sentence..."><br><br>
             <input type="submit" class="btn-submit" value="Submit">
           </div>
@@ -75,7 +163,7 @@
         <div class="row justify-content-left">
           <div class="col-lg-4">
             <h3>ClearTerms</h3>
-            <div><br><a href="about-us.html">About Us</a></div>
+            <div><br><a href="index.html#about">About Us</a></div>
             <div><a href="faq.html">Frequently Asked Questions</a></div>
             <div><a href="crowd.html">Help Rank Terms & Conditions</a></div>
           </div>
