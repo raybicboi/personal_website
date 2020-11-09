@@ -1104,3 +1104,14 @@ textarea {
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
+#myUL li z {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: none  
+}

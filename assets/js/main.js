@@ -228,6 +228,7 @@ function statement3() {
 
 // function for search functionality
 function searchCompany() {
+  var nameCounter = 0;
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
@@ -242,16 +243,25 @@ function searchCompany() {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          nameCounter++;
           li[i].style.display = "";
         } else {
           li[i].style.display = "none";
         }
       }
+      var noRes = document.getElementById("noRes");
+      if (nameCounter == 0) {
+        noRes.style.display = "block";
+      } else {
+        noRes.style.display = "none";
+      }
+      nameCounter = 0;
     }
   });
 }
 
 function searchCompanyEnter() {
+  var nameCounter = 0;
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
@@ -263,9 +273,17 @@ function searchCompanyEnter() {
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      nameCounter++;
       li[i].style.display = "";
     } else {
       li[i].style.display = "none";
     }
   }
+  var noRes = document.getElementById("noRes");
+  if (nameCounter == 0) {
+    noRes.style.display = "block";
+  } else {
+    noRes.style.display = "none";
+  }
+  nameCounter = 0;
 }
