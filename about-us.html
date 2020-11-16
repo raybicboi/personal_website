@@ -49,32 +49,16 @@
   </section>
 
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <!-- ======= Footer & JS files + Firebase imported from another file ======= -->
+  <div id="footer-placeholder"></div>
+  <script>
+    $.get("footer.html", function(data){
+      $("#footer-placeholder").replaceWith(data);
+    });
+  </script>
 
-    <div class="container footer-top">
-  
-        <div class="row justify-content-left">
-          <div class="col-lg-4">
-            <h3>ClearTerms</h3>
-            <div><br><a href="about-us.html">About Us</a></div>
-            <div><a href="faq.html">Frequently Asked Questions</a></div>
-            <div><a href="crowd.html">Help Rank Terms & Conditions</a></div>
-          </div>
-        </div>
-  
-    </div>
-  
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        <!-- &copy; Copyright <strong><span>ClearTerms</span></strong>. All Rights Reserved -->
-      </div>
-    </div>
-    </footer>
-  
-    <!-- End Footer -->
-  
-    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <!-- Top of page arrow -->
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
   
     <!-- Vendor JS Files -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
