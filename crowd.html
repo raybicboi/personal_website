@@ -17,60 +17,57 @@
   </script> 
 
   <!-- ======= Section ======= -->
-    <section class="section section-bg1">
-      <div class="container section-bg2" id="crowd-inner">
-        <div class="section-title">
-          <h3 data-aos="fade-in">Participate</h3>
-          <p1>Help us improve our ML model by ranking some terms & conditions.</p1><br><br><br>
-          <p1>Click the statement that you think is more important for you, 
-              a customer browsing the website, to know.</p1>
+  <section class="section section-bg1">
+    <div class="container section-bg2" id="crowd-inner">
+      <div class="section-title">
+        <h3 data-aos="fade-in">Participate</h3>
+        <p>Help us improve our ML model by ranking some terms & conditions.</p><br><br>
+        <p>Click the statement that you think is more important for you, 
+            a customer browsing the website, to know.</p>
+        </br>
+        </br>
+        <div id="all-statements"> 
+          <p> The following two terms&conditions are from: 
+            https://www.geekbuying.com/help/customer_service/return_policy</p>
           </br>
-          <div class="statement row d-flex align-items-stretch">
-            <div id="statement-inner1" onclick="statement1()">
-              <p class="statement-title">Statement 1</p>
-              </br>
-              <p>GeekBuying will be in charge of all the repair handling
-                  fees and non-artificial defective component replacement
-                  charges (this free repair rule does not apply to
-                  motherboard & screen).</p>
-              </br>
-              <p class = "statement-Citation"> - From GeekBuying </p>
-            </div>
-            <div id="statement-inner2" onclick="statement2()">
-              <p class="statement-title">Statement 2</p>
-              </br>
-              <p>Geekbuying sincerely suggests every respected customer
-                  to read the following regulations carefully 
-                  before purchase.</p>
-              </br>
-              <p class = "statement-Citation"> - From GeekBuying </p>
-            </div>
-            <div id="statement-inner3" onclick="statement3()">
-              <p class="statement-title">Statement 3</p>
-              </br>
-              <p>Statement 1 and statement 2 are equally important.</p>
-            </div>
-          </div>
+          <p class=statement-description> <span class=statement-title> Statement 1: </span>
+            GeekBuying will be in charge of all the repair handling
+            fees and non-artificial defective component replacement
+            charges (this free repair rule does not apply to
+            motherboard & screen).
+          </p>
           </br>
-          <div id="crowd-form1" class="survey col-md-8 section-bg2">
-            <p>Why did you choose Statement 1?</p><br><br>
-            <input type="text" placeholder="write a sentence..."><br><br>
+          <p class=statement-description> <span class=statement-title> Statement 2: </span>
+            Geekbuying sincerely suggests every respected customer
+            to read the following regulations carefully 
+            before purchase.
+          </p>
+        </div>
+        <div id = "selections">
+          <h3> Select an option </h3>
+          </br>
+          <form>
+            <input type="radio" name="option" value="Statement 1 is more important" /> 
+            Statement 1 is more important
+            </br>
+            </br>
+            <input type="radio" name="option" value="Equally important" /> 
+            Two statements are equally important
+            </br>
+            </br>
+            <input type="radio" name="option" value="Statement 2 is more important" /> 
+            Statement 1 is more important
+            </br>
+            </br>
+            </br>
             <input type="submit" class="btn-submit" value="Submit">
-          </div>
-          <div id="crowd-form2" class="survey col-md-8 section-bg2">
-            <p>Why did you choose Statement 2?</p><br><br>
-            <input type="text" placeholder="write a sentence..."><br><br>
-            <input type="submit" class="btn-submit" value="Submit">
-          </div>
-          <div id="crowd-form3" class="survey col-md-8 section-bg2">
-            <p>Why did you choose Statement 3?</p><br><br>
-            <input type="text" placeholder="write a sentence..."><br><br>
-            <input type="submit" class="btn-submit" value="Submit">
-          </div>
+          </form>
+        </br>
         </div>
       </div>
-    </section>
-    <!-- End Section -->
+    </div>
+  </section>
+  <!-- End Section -->
 
   <!-- ======= Footer & JS files + Firebase imported from another file ======= -->
   <div id="footer-placeholder"></div>
