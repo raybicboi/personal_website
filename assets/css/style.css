@@ -507,6 +507,13 @@ section {
   padding-bottom: 40px;
 }
 
+/* changing arrow colors */
+.slick-prev:before {
+  color: #223C5D;
+}
+.slick-next:before {
+  color: #223C5D;
+}
 
 /*--------------------------------------------------------------
 # Browse Companies
