@@ -489,6 +489,7 @@ section {
 .slick-item img {
   /* opacity: 50%; */
   max-width: 80%;
+  border: 2px black solid; /* Raymond & Wenshan addition to original code */
 }
 
 .centermode-slick {
