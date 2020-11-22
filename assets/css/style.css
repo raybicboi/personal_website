@@ -704,51 +704,56 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Individual Company Page (Wen Shan's Code) 
+# Individual Company Page (Wen Shan's Code)
 --------------------------------------------------------------*/
 #individual-company {
   background-color: #E8FFFD;
-}
-
-#company-info {
-  height: 360px;
-}
-
-#company-logo {
+ }
+  
+ #company-logo {
   float: left;
-  width: 48%;
-  margin-top: 5%;
-  text-align: right;
-}
-
-#company-desc {
-  float: right;
+  width: 35%;
   margin-top: 4%;
-  width: 48%;
-}
-
-
-#individual-company h1 {
+  text-align: right;
+ }
+  
+ #company-desc {
+  float: left;
+  margin-top: 4%;
+  margin-left: 10%;
+  width: 50%;
+  padding-top: 1%;
+  padding-left: 2%;
+  background-color: white;
+ }
+  
+ #company-desc h5, #company-desc p, #company-desc h1{
+  color: #223C5D;
+  color: #009184;
+ }
+  
+  
+ #individual-company h1 {
   text-transform: uppercase;
   font-size: 34px;
-  padding-top: 30px;
+  padding-top: 0px;
   margin-bottom: 0px;
-}
-
-#term-background {
+ }
+  
+ #term-background {
   background: #abe5e0;
-}
-
-#term-container {
+ }
+  
+ #term-container {
   margin: 0px 40px;
   overflow: auto;
-}
-
-@media (min-width:1180px) {
+ }
+  
+ @media (min-width:1180px) {
   #term-details {
     width: 65%;
   }
-
+  
   #term-details th {
     text-transform: uppercase;
     padding: 50px 10px;
@@ -756,18 +761,18 @@ section {
     color: #009184;
     font-size: 18px;
   }
-
+  
   #term-details td {
     padding: 30px 15px 30px 25px;
     width: 70%;
     color: #223C5D;
     font-size: 16px;
   }
-
+  
   table {
     float: left;
   }
-
+  
   #participate {
     width: 26%;
     margin: 0% 3%;
@@ -780,24 +785,24 @@ section {
     background: #E8FFFD;
     border-radius: 30px;
   }
-
+  
   #participate h2 {
     color: #009184;
     font-size: 24px;
   }
-
+  
   #participate .btn-get-started {
     width: 100%;
     text-align: center;
     font-size: 14px;
   }
-}
-
-@media (max-width:1179px) {
+ }
+  
+ @media (max-width:1179px) {
   #term-details {
     width: 100%;
   }
-
+  
   #term-details th {
     text-transform: uppercase;
     padding: 50px 10px;
@@ -805,15 +810,15 @@ section {
     color: #009184;
     font-size: 18px;
   }
-
+  
   #term-details td {
     padding: 30px 15px 30px 25px;
     width: 70%;
     color: #223C5D;
     font-size: 16px;
   }
-
-
+  
+  
   #participate {
     width: 70%;
     margin: 3% auto;
@@ -824,33 +829,35 @@ section {
     background: #E8FFFD;
     border-radius: 30px;
   }
-
+  
   #participate h2 {
     color: #009184;
     font-size: 24px;
     text-align: center;
   }
-
+  
   #participate .btn-get-started {
     width: 280px;
     text-align: center;
     font-size: 14px;
   }
-}
-
-#term-content {
+ }
+  
+  
+ #term-content {
   width: 47%;
   margin: 0px auto;
   padding: 60px;
   color: #E5E5E5;
   line-height: 1.6em;
   background: #FFFFFF;
-}
-
-#term-content .emphasis {
+ }
+  
+ #term-content .emphasis {
   color: #009184;
   font-weight: bold;
-}
+ }
+ 
 
 /*--------------------------------------------------------------
 # Crowdsourcing (Wen Shan & Raymond's Code)
