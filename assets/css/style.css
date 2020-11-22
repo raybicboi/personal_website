@@ -855,11 +855,9 @@ section {
 /*--------------------------------------------------------------
 # Crowdsourcing (Wen Shan & Raymond's Code)
 --------------------------------------------------------------*/
- 
 /* .crowd {
-  padding: 30px 0;
+ padding: 30px 0;
 } */
- 
 .survey {
   display: none;
   margin: 0px auto;
@@ -868,18 +866,16 @@ section {
   /* border-style: solid;
   /* border-color: #223C5D; */
   /* transition: ease-in-out 0.3s; */
-}
- 
-#crowd-inner {
+ }
+ #crowd-inner {
   border-radius: 30px;
   padding: 30px 0;
   font-size: 18px;
   overflow: auto;
   width: 100%;
   padding-bottom: 10%;
-}
- 
-#all-statements {
+ }
+ #all-statements {
   width: 55%;
   float: left;
   padding: 30px;
@@ -888,9 +884,9 @@ section {
   font-size: 16px;
   margin-left: 5%;
   text-align: left;
-}
-
-#selections {
+ }
+  
+ #selections {
   width: 28%;
   float: left;
   padding: 30px;
@@ -900,19 +896,18 @@ section {
   margin-right: 5%;
   margin-left: 7%;
   text-align: left;
-}
-
-#selections h3 {
+ }
+  
+ #selections h3 {
   font-size: 24px;
-}
-
-.statement {
+ }
+  
+ .statement {
   padding: 30px;
-}
- 
-
-
-#crowd-inner .btn-submit {
+ }
+  
+  
+ #crowd-inner .btn-submit {
   color: #fff;
   border-radius: 10px;
   font-size: 18px;
@@ -923,21 +918,22 @@ section {
   display: inline-block;
   margin-left: 20%;
   background: #223C5D;
-}
-
-#crowd-inner .btn-submit:hover {
+ }
+  
+ #crowd-inner .btn-submit:hover {
   background: transparent;
   color: #223C5D;
   border: 2px solid #223C5D;
   text-decoration: none;
-}
-
-.statement-title {
+ }
+  
+ .statement-title {
   font-family: "Raleway", sans-serif;
   font-size: 1.2em;
   margin-bottom: 10%;
   font-weight: bold;
-}
+ }
+ 
 
 
 /*--------------------------------------------------------------
