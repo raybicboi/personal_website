@@ -875,7 +875,7 @@ section {
   /* transition: ease-in-out 0.3s; */
  }
  .statement-description {
-   cursor:default;
+   cursor: default;
  }
  #crowd-inner {
   border-radius: 30px;
