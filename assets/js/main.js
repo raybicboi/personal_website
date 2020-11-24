@@ -226,6 +226,17 @@ function statement3() {
   }
 }
 
+// croudsourcing modified radio button javascript
+function statement1Select() {
+  var statement1 = document.getElementById("statement1");
+  statement1.checked = true;
+}
+
+function statement2Select() {
+  var statement2 = document.getElementById("statement2");
+  statement2.checked = true;
+}
+
 // function for search functionality
 function searchCompany() {
   var nameCounter = 0;

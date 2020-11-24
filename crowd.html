@@ -30,14 +30,14 @@
           <p> The following two terms&conditions are from: 
             https://www.geekbuying.com/help/customer_service/return_policy</p>
           </br>
-          <p class=statement-description> <span class=statement-title> Statement 1: </span>
+          <p class=statement-description onclick="statement1Select()"> <span class=statement-title> Statement 1: </span>
             GeekBuying will be in charge of all the repair handling
             fees and non-artificial defective component replacement
             charges (this free repair rule does not apply to
             motherboard & screen).
           </p>
           </br>
-          <p class=statement-description> <span class=statement-title> Statement 2: </span>
+          <p class=statement-description onclick="statement2Select()"> <span class=statement-title> Statement 2: </span>
             Geekbuying sincerely suggests every respected customer
             to read the following regulations carefully 
             before purchase.
@@ -48,7 +48,7 @@
           </br>
           <form>
             <label>
-              <input type="radio" name="option" value="Statement 1 is more important" /> 
+              <input type="radio" id="statement1" name="option" value="Statement 1 is more important" /> 
               Statement 1 is more important
             </label>
             </br>
@@ -60,7 +60,7 @@
             </br>
             </br>
             <label>
-              <input type="radio" name="option" value="Statement 2 is more important" /> 
+              <input type="radio" id="statement2" name="option" value="Statement 2 is more important" /> 
               Statement 2 is more important
             </label>
             </br>
