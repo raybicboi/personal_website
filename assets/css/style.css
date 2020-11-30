@@ -305,6 +305,12 @@ a:hover {
   font-size: 22px;
 }
 
+.company-img img {
+  margin-left: 2%;
+  margin-bottom: 3%;
+
+}
+
 @media (max-width: 991px) {
   #hero {
     -moz-text-align-last: center;
