@@ -488,7 +488,8 @@ section {
 --------------------------------------------------------------*/
 .slick-item img {
   /* opacity: 50%; */
-  max-width: 80%;
+  /* max-width: 80%; */
+  width: 70%;
   border: 2px black solid; /* Raymond & Wenshan addition to original code */
 }
 
