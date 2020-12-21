@@ -308,7 +308,7 @@ a:hover {
 .company-img img {
   margin-left: 2%;
   margin-bottom: 3%;
-
+  border: 2px black solid; /* Raymond & Wenshan addition to original code */
 }
 
 @media (max-width: 991px) {
