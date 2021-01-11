@@ -727,7 +727,7 @@ section {
  #company-desc {
   float: left;
   margin-top: 4%;
-  margin-left: 10%;
+  /* margin-left: 10%; */
   width: 50%;
   padding-top: 1%;
   padding-left: 2%;
@@ -903,6 +903,10 @@ section {
   text-align: left;
  }
   
+ #all-statements h3 {
+  font-size: 24px;
+ }
+
  #selections {
   width: 28%;
   float: left;
