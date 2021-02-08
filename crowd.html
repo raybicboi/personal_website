@@ -16,65 +16,45 @@
       });
   </script> 
 
-  <!-- ======= Section ======= -->
-  <section class="section section-bg1">
-    <div class="container section-bg2" id="crowd-inner">
-      <div class="section-title">
-        <h3 data-aos="fade-in">Help Us Improve Our Machine Learning Model</h3>
-        <p>Help us improve our ML model by ranking some terms & conditions.</p><br><br>
-        <p>Click the statement that you think is more important for you, 
-            a customer browsing the website, to know.</p>
-        </br>
-        </br>
-        <div id="all-statements"> 
-          <h3>Rank Some Terms and Conditions</h3>
-          <p> The following two terms&conditions are from: 
-            https://www.geekbuying.com/help/customer_service/return_policy</p>
-          </br>
-          <p class=statement-description onclick="statement1Select()"> <span class=statement-title> Statement 1: </span>
+ <!-- ======= Section ======= -->
+ <section class="section section-bg1">
+  <div class="container section-bg2" id="crowd-inner">
+    <div class="section-title">
+      </br></br></br>
+      <h3 data-aos="fade-in">Participate</h3>
+      <p>Help us improve our ML model by ranking some terms & conditions.</p><br></br>
+      <p>Click the statement that you think is more important for you,
+          a customer browsing the website, to know.</p>
+      </br>
+      <p> The following two terms&conditions are from:
+          https://www.geekbuying.com/help/customer_service/return_policy</p>
+      </br>
+      <div class="row">
+        <div class="statement left" id="s-left" onclick="selectStatementLeft()">
+          <h4 class="statement-title"> Statement 1: </h4>
+          <p class="statement-description">
             GeekBuying will be in charge of all the repair handling
             fees and non-artificial defective component replacement
             charges (this free repair rule does not apply to
-            motherboard & screen).
-          </p>
-          </br>
-          <p class=statement-description onclick="statement2Select()"> <span class=statement-title> Statement 2: </span>
-            Geekbuying sincerely suggests every respected customer
-            to read the following regulations carefully 
-            before purchase.
-          </p>
+            motherboard & screen).</p>
         </div>
-        <div id = "selections">
-          <h3> Select an option </h3>
-          </br>
-          <form>
-            <label>
-              <input type="radio" id="statement1" name="option" value="Statement 1 is more important" /> 
-              Statement 1 is more important
-            </label>
-            </br>
-            </br>
-            <label>
-              <input type="radio" name="option" value="Equally important" /> 
-              Two statements are equally important
-            </label>
-            </br>
-            </br>
-            <label>
-              <input type="radio" id="statement2" name="option" value="Statement 2 is more important" /> 
-              Statement 2 is more important
-            </label>
-            </br>
-            </br>
-            </br>
-            <input type="submit" class="btn-submit" value="Submit">
-          </form>
-        </br>
+        <div class="statement right" id="s-right" onclick="selectStatementRight()">
+          <h4 class="statement-title"> Statement 2: </h4>
+            <p class="statement-description">
+              Geekbuying sincerely suggests every respected customer
+              to read the following regulations carefully
+              before purchase.</p>
         </div>
       </div>
+      <div class="statement-equal" id="s-bot" onclick="selectStatementBot()">
+        <p class="statement-description">
+          Both statements are equally important.</p>
     </div>
-  </section>
-  <!-- End Section -->
+      <input type="submit" class="btn-submit" id="s-submit" value="Submit">
+    </div>
+  </div>
+</section>
+<!-- End Section -->
 
   <!-- ======= Footer & JS files + Firebase imported from another file ======= -->
   <div id="footer-placeholder"></div>

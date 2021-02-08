@@ -226,7 +226,7 @@ function statement3() {
   }
 }
 
-// croudsourcing modified radio button javascript
+// crowdsourcing modified radio button javascript
 function statement1Select() {
   var statement1 = document.getElementById("statement1");
   statement1.checked = true;
@@ -236,6 +236,41 @@ function statement2Select() {
   var statement2 = document.getElementById("statement2");
   statement2.checked = true;
 }
+
+// more crowdsourcing javascript functions
+function selectStatementLeft() {
+  var statement1 = document.getElementById("s-left");
+  var statement2 = document.getElementById("s-right");
+  var statement3 = document.getElementById("s-bot");
+  var button = document.getElementById("s-submit");
+  statement1.style.border = "4px #009184 solid";
+  statement2.style.border = "2px #009184 solid";
+  statement3.style.border = "2px #009184 solid";
+  button.style.display = "inline-block";
+}
+ 
+function selectStatementRight() {
+  var statement1 = document.getElementById("s-left");
+  var statement2 = document.getElementById("s-right");
+  var statement3 = document.getElementById("s-bot");
+  var button = document.getElementById("s-submit");
+  statement2.style.border = "4px #009184 solid";
+  statement1.style.border = "2px #009184 solid";
+  statement3.style.border = "2px #009184 solid";
+  button.style.display = "inline-block";
+}
+ 
+function selectStatementBot() {
+  var statement1 = document.getElementById("s-left");
+  var statement2 = document.getElementById("s-right");
+  var statement3 = document.getElementById("s-bot");
+  var button = document.getElementById("s-submit");
+  statement3.style.border = "4px #009184 solid";
+  statement2.style.border = "2px #009184 solid";
+  statement1.style.border = "2px #009184 solid";
+  button.style.display = "inline-block";
+ }
+ 
 
 // function for search functionality
 function searchCompany() {

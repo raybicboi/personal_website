@@ -870,7 +870,7 @@ section {
 # Crowdsourcing (Wen Shan & Raymond's Code)
 --------------------------------------------------------------*/
 /* .crowd {
- padding: 30px 0;
+padding: 30px 0;
 } */
 .survey {
   display: none;
@@ -881,54 +881,49 @@ section {
   /* border-color: #223C5D; */
   /* transition: ease-in-out 0.3s; */
  }
- .statement-description {
-   cursor: default;
+  
+ #crowd-inner .row {
+  display: flex;
+  justify-content: space-evenly;
  }
- #crowd-inner {
-  border-radius: 30px;
-  padding: 30px 0;
+  
+ #crowd-inner p {
   font-size: 18px;
-  overflow: auto;
-  width: 100%;
-  padding-bottom: 10%;
- }
- #all-statements {
-  width: 55%;
-  float: left;
-  padding: 30px;
-  background: #FFFFFF;
-  color: #737373;
-  font-size: 16px;
-  margin-left: 5%;
-  text-align: left;
- }
-  
- #all-statements h3 {
-  font-size: 24px;
- }
-
- #selections {
-  width: 28%;
-  float: left;
-  padding: 30px;
-  background: #FFFFFF;
-  color: #737373;
-  font-size: 16px;
-  margin-right: 5%;
-  margin-left: 7%;
-  text-align: left;
- }
-  
- #selections h3 {
-  font-size: 24px;
  }
   
  .statement {
-  padding: 30px;
+  margin: 2%;
+  flex-basis: 40%;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 50px 30px;
+  overflow: auto;
+  border: 2px #009184 solid;
+  background-color: white;
  }
   
+ .left {
+  margin-right: -5%;
+ }
   
- #crowd-inner .btn-submit {
+ .statement-equal {
+  border-radius: 30px;
+  padding: 50px 30px;
+  font-size: 18px;
+  overflow: auto;
+  width: 86%;
+  margin-left: 7%;
+  margin-top: 1%;
+  border: 2px #009184 solid;
+  background-color: white;
+ }
+  
+ p.statement-description {
+  color: #009184;
+  font-size: 16px !important;
+ }
+  
+  #crowd-inner .btn-submit {
   color: #fff;
   border-radius: 10px;
   font-size: 18px;
@@ -936,24 +931,28 @@ section {
   width: 150px !important;
   border: 2px solid #223C5D;
   transition: all ease-in-out 0.2s;
-  display: inline-block;
-  margin-left: 20%;
   background: #223C5D;
+  margin-top: 5%;
+  display: none;
  }
-  
- #crowd-inner .btn-submit:hover {
+  #crowd-inner .btn-submit:hover {
   background: transparent;
   color: #223C5D;
   border: 2px solid #223C5D;
   text-decoration: none;
  }
-  
- .statement-title {
+  .statement-title {
   font-family: "Raleway", sans-serif;
-  font-size: 1.2em;
+  text-transform: uppercase;
+  font-size: 18px;
   margin-bottom: 10%;
   font-weight: bold;
+  color: #009184;
  }
+  
+ .statement, .statement-equal{
+   cursor: default;
+ } 
  
 
 
