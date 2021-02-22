@@ -269,7 +269,7 @@ function selectStatementBot() {
   statement2.style.border = "2px #009184 solid";
   statement1.style.border = "2px #009184 solid";
   button.style.display = "inline-block";
- }
+}
  
 
 // function for search functionality

@@ -715,52 +715,40 @@ section {
 --------------------------------------------------------------*/
 #individual-company {
   background-color: #E8FFFD;
- }
-  
- #company-logo {
-  float: left;
-  width: 35%;
-  margin-top: 4%;
-  text-align: right;
- }
-  
- #company-desc {
+}
+#company-logo {
   float: left;
   margin-top: 4%;
-  margin-left: 10%;
-  width: 50%;
+  margin-left: 5%;
+}
+#company-desc {
+  float: left;
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 47%;
   padding-top: 1%;
   padding-left: 2%;
-  background-color: white;
- }
-  
- #company-desc h5, #company-desc p, #company-desc h1{
+}
+#company-desc h5, #company-desc p, #company-desc h1, #participate h1{
   color: #223C5D;
-  color: #009184;
- }
+}
   
-  
- #individual-company h1 {
+#individual-company h1{
   text-transform: uppercase;
-  font-size: 34px;
+  font-size: 28px;
   padding-top: 0px;
   margin-bottom: 0px;
- }
-  
- #term-background {
+}
+#term-background {
   background: #abe5e0;
- }
-  
- #term-container {
-  margin: 0px 40px;
+  margin-left: 5%;
+  padding: 2%;
+  width: 60%;
+  float: left;
+}
+#term-container {
   overflow: auto;
- }
-  
- @media (min-width:1180px) {
-  #term-details {
-    width: 65%;
-  }
-  
+}
   #term-details th {
     text-transform: uppercase;
     padding: 50px 10px;
@@ -768,102 +756,57 @@ section {
     color: #009184;
     font-size: 18px;
   }
-  
   #term-details td {
     padding: 30px 15px 30px 25px;
     width: 70%;
     color: #223C5D;
     font-size: 16px;
   }
-  
-  table {
-    float: left;
-  }
-  
   #participate {
-    width: 26%;
-    margin: 0% 3%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    padding: 45px;
+    width: 27%;
     float: right;
+    margin-left: 1%;
+    margin-right: 5%;
+    padding: 2%;
     color: #009184;
     font-size: 16px;
-    background: #E8FFFD;
-    border-radius: 30px;
+    background: white;;
   }
-  
   #participate h2 {
-    color: #009184;
-    font-size: 24px;
-  }
-  
-  #participate .btn-get-started {
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-  }
- }
-  
- @media (max-width:1179px) {
-  #term-details {
-    width: 100%;
-  }
-  
-  #term-details th {
-    text-transform: uppercase;
-    padding: 50px 10px;
-    width: 30%;
     color: #009184;
     font-size: 18px;
   }
   
-  #term-details td {
-    padding: 30px 15px 30px 25px;
-    width: 70%;
-    color: #223C5D;
-    font-size: 16px;
-  }
-  
-  
-  #participate {
-    width: 70%;
-    margin: 3% auto;
-    margin-top: 3%;
-    padding: 45px;
-    color: #009184;
-    font-size: 16px;
-    background: #E8FFFD;
-    border-radius: 30px;
-  }
-  
-  #participate h2 {
-    color: #009184;
-    font-size: 24px;
+  #participate h1 {
+    margin-bottom: 70px;
     text-align: center;
   }
-  
   #participate .btn-get-started {
     width: 280px;
     text-align: center;
     font-size: 14px;
   }
- }
   
-  
- #term-content {
-  width: 47%;
-  margin: 0px auto;
+  #view-in-context {
+    width: 60%;
+    margin-left: 5%;
+  }
+  #term-content {
   padding: 60px;
   color: #E5E5E5;
   line-height: 1.6em;
   background: #FFFFFF;
- }
-  
- #term-content .emphasis {
+  }
+  #term-content .emphasis {
   color: #009184;
   font-weight: bold;
  }
+  
+#important-terms {
+  display: flex;
+  justify-content: space-evenly;
+}
+ 
  
 
 /*--------------------------------------------------------------
@@ -880,18 +823,18 @@ padding: 30px 0;
   /* border-style: solid;
   /* border-color: #223C5D; */
   /* transition: ease-in-out 0.3s; */
- }
+}
   
- #crowd-inner .row {
+#crowd-inner .row {
   display: flex;
   justify-content: space-evenly;
- }
+}
   
- #crowd-inner p {
+#crowd-inner p {
   font-size: 18px;
- }
+}
   
- .statement {
+.statement {
   margin: 2%;
   flex-basis: 40%;
   box-sizing: border-box;
@@ -900,13 +843,13 @@ padding: 30px 0;
   overflow: auto;
   border: 2px #009184 solid;
   background-color: white;
- }
+}
   
- .left {
+.left {
   margin-right: -5%;
- }
+}
   
- .statement-equal {
+.statement-equal {
   border-radius: 30px;
   padding: 50px 30px;
   font-size: 18px;
@@ -916,14 +859,14 @@ padding: 30px 0;
   margin-top: 1%;
   border: 2px #009184 solid;
   background-color: white;
- }
+}
   
- p.statement-description {
+p.statement-description {
   color: #009184;
   font-size: 16px !important;
- }
+}
   
-  #crowd-inner .btn-submit {
+#crowd-inner .btn-submit {
   color: #fff;
   border-radius: 10px;
   font-size: 18px;
@@ -934,27 +877,29 @@ padding: 30px 0;
   background: #223C5D;
   margin-top: 5%;
   display: none;
- }
-  #crowd-inner .btn-submit:hover {
+}
+#crowd-inner .btn-submit:hover {
   background: transparent;
   color: #223C5D;
   border: 2px solid #223C5D;
   text-decoration: none;
- }
-  .statement-title {
+}
+.statement-title {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-size: 18px;
   margin-bottom: 10%;
   font-weight: bold;
   color: #009184;
- }
+}
   
- .statement, .statement-equal{
+.statement, .statement-equal{
    cursor: default;
- } 
- 
-
+}
+  
+.statement:hover, .statement-equal:hover{
+  box-shadow: 0 0 25px rgba(33,33,33,.2);
+}
 
 /*--------------------------------------------------------------
 # Add a Company (Wen Shan's Code)
