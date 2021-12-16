@@ -1,0 +1,975 @@
+/*
+some elements adapted from https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
+*/
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+
+/* #6264D9 - header, footer, buttons, headers, bold */
+/* #A55CE6 - heading*/
+/* #5CA7E6 - links */
+/* #1CE7EA - tmp background*/
+/* #D4FFCF - background/splash */
+
+/* #E94B64 - coral accent */
+/* #737373 - gray body text */
+/* #E5E5E5 - light grey body text*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #737373;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  color: #6264D9;
+  font-weight: bold;
+}
+
+a {
+  color: #5CA7E6;
+}
+
+a:hover {
+  color: #E94B64;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-get-started {
+  color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 8px 35px 10px 35px;
+  border: 2px solid #6264D9;
+  transition: all ease-in-out 0.2s;
+  display: inline-block;
+  background: #213b52;
+}
+
+.btn-get-started a {
+  color: #fff;
+  font-weight: normal;
+}
+
+.btn-get-started:hover {
+  background: transparent;
+  color: #6264D9;
+  text-decoration: none;
+}
+
+.btn-get-started:hover a {
+  color: #6264D9;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  background: #6264D9; /*284864*/
+  color: #fff;
+  /* border-color: #fff; */
+  transition: display 0.3s ease-in-out;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.back-to-top:hover {
+  color: #fff;
+  background: #E94B64;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 80px;
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 16px;
+  background: #6264D9;
+}
+
+#header .logo h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 10px 0 2px 0;
+  line-height: 1;
+  letter-spacing: 3px;
+  /* text-transform: uppercase; */
+}
+
+#header .logo h1 a, #header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .logo h1 a span, #header .logo h1 a:hover span {
+  color: #E94B64;
+}
+
+#header .logo h6 {
+  font-size: 11px;
+  color: #adc7de;
+  font-style: oblique;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 1;     /* Modification for search bar functionaility (for hyperlinks to work) */
+}
+
+.nav-menu .btn-search {
+  background: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-menu .input-search {
+  background: #fff;
+  border: 2px solid #fff;
+  padding: 10px;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  float: left;
+  margin-left: 20px;
+}
+
+
+.nav-menu ul {
+  border-radius: 6px;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #adc7de;
+  padding: 10px 15px;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-nav-toggle i {
+  color: #E94B64;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: #fff;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-nav .btn-search {
+  background: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid #737373;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.mobile-nav .input-search {
+  background: #fff;
+  border: 2px solid #737373;
+  padding: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  max-width: 300px;
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #213b52;
+  padding: 10px 20px;
+  font-weight: 500;
+  outline: none;
+  transition: 0.3s;
+}
+
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(18, 33, 46, 0.6);
+  overflow: hidden;
+  display: none;
+  transition: ease-in-out 0.2s;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section (First section)
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  padding: 0 0 0 0;
+  background: #D4FFCF;
+}
+
+#hero h1 {
+  margin: 0 0 15px 0;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #6264D9;
+}
+
+#hero h2 {
+  color: #969696;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+#hero h2 .emphasis {
+  color: #6264D9;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+#hero h5 {
+  color: #fff;
+}
+
+.company-img img {
+  margin-left: 2%;
+  margin-bottom: 3%;
+  border: 2px black solid; /* Raymond & Wenshan addition to original code */
+}
+
+.image {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  #hero {
+    -moz-text-align-last: center;
+    text-align: center;
+    padding: 10px;
+  }
+  #hero h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero h2 .emphasis{
+    color: #6264D9;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero .hero-img img {
+    width: 80%;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    -moz-text-align-last: center;
+    text-align: center;
+    padding: 10px;
+  }
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero h2 .emphasis{
+    color: #6264D9;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero .hero-img img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero .hero-img img {
+    width: 80%;
+    margin-top: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg1 {
+  background: #fff;
+}
+
+.section-bg2 {
+  background: #D4FFCF;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h3 {
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  /* padding-bottom: 20px; */
+  position: relative;
+  color: #213b52;
+}
+
+.section-title p {
+  margin-bottom: 0;
+} */
+
+/*--------------------------------------------------------------
+# About (2nd section)
+--------------------------------------------------------------*/
+.about {
+  transition: 0.6s;
+}
+
+.about .content {
+  padding: 30px 0;
+}
+
+.about .content h3 {
+  font-weight: 700;
+  font-size: 34px;
+  color: #6264D9; /*213b52*/
+}
+
+.about .content h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 25px 0 10px 0;
+  color: #6264D9; /*213b52*/
+}
+
+.about .content h2 {
+  color: #969696;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.about .content p {
+  font-size: 15px;
+  margin-bottom: 10;
+}
+
+.about .content p .emphasis{
+  font-weight: bold;
+  color: #6264D9;
+}
+
+@media (max-width: 991px) {
+  .about .content{
+    -moz-text-align-last: center;
+    padding: 30px;
+  }
+  .about .content h3 {
+    font-size: 28px;
+    text-align:center;
+  }
+  .about .content h4 {
+    font-size: 16px;
+  }
+  .about .content p {
+    font-size: 15px;
+  }
+  .about .content p .emphasis{
+    font-size: 15px;
+    color: #6264D9;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .content {
+    -moz-text-align-last: center;
+    text-align: center;
+    padding: 50px;
+  }
+  .about .content h3 {
+    font-size: 28px;
+  }
+  .about .content h4 {
+    font-size: 16px;
+  }
+  .about .content p {
+    font-size: 14px;
+  }
+  .about .content p .emphasis{
+    font-size: 14px;
+    color: #6264D9;
+  }
+}
+
+/*--------------------------------------------------------------
+# Slider on index page
+--------------------------------------------------------------*/
+.slick-item img {
+  /* opacity: 50%; */
+  /* max-width: 80%; */
+  width: 70%;
+  border: 2px black solid; /* Raymond & Wenshan addition to original code */
+}
+
+.centermode-slick {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+}
+
+.centermode-slick.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
+
+.services {
+  padding-bottom: 40px;
+}
+
+/* changing arrow colors */
+.slick-prev:before {
+  color: #6264D9;
+}
+.slick-next:before {
+  color: #6264D9;
+}
+
+/*--------------------------------------------------------------
+# Browse Companies (Grid Page)
+--------------------------------------------------------------*/
+.browse p {
+  font-size: 15px;
+  margin-bottom: 10;
+  color: #969696;
+}
+
+.browse .company-row {
+  margin: 20px;
+  padding: 10px 20px;
+  /* border-bottom: 1px solid #dde8f1; */
+}
+
+.browse .company-row .company {
+  max-height: 100%;
+}
+
+.browse .company-row .company img {
+  margin-left: 20px;
+  margin-right: 20px;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.browse .company-row .company img:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+
+.browse .company-row i {
+  color: #9bbbd7;
+  font-size: 20px;
+  float: left;
+  line-height: 0;
+  padding: 13px 0 0 0;
+  margin: 0;
+}
+
+.browse .company-row h4 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  margin: 0 0 10px 28px;
+  color: #213b52;
+}
+
+.browse .company-row p {
+  font-size: 15px;
+}
+.browse .company-row p .emphasis{
+  font-weight: bold;
+  color: #6264D9;
+}
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions (Accordion Page)
+--------------------------------------------------------------*/
+
+#faq .container {
+  width: 70%;
+  min-width: 780px;
+}
+
+.emphasis{
+  font-weight: bold;
+  color: #6264D9;
+} 
+
+.accordion {
+  background-color: #FFFFFF;
+  color:#6264D9;
+  cursor: pointer;
+  padding: 3%;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.bx-help-circle {
+  color: #9bbbd7;
+  font-size: 20px;
+  line-height: 0;
+  padding-right: 2%;
+  margin: 0;
+}
+
+.active, .accordion:hover {
+  background-color: #1CE7EA;
+}
+
+.panel {
+  padding: 5% 10%;
+  background-color: #FFFFFF;
+  display: none;
+  overflow: hidden;
+  margin-bottom: 1%;
+}
+
+.accordion:after {
+  content: '\02795'; 
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.active:after {
+  content: "\2796"; 
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  /* height: 200px; */
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 16px;
+  background: #6264D9;
+}
+
+#footer .footer-top {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  padding: 30px 15px;
+}
+
+#footer .footer-top h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#footer .footer-top a {
+  font-size: 15px;
+  color: #adc7de;
+  margin: 30px 0 0 0;
+  /* padding: 0; */
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+#footer a:hover, #footer .active > a, #footer li:hover > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#footer .footer-bottom {
+  border-top: 1px solid #1a2e40;
+  z-index: 2;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#footer .copyright {
+  text-align: center;
+  float: left;
+}
+
+#footer .credits {
+  float: right;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  #footer .copyright, #footer .credits {
+    padding: 5px;
+    float: none;
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------------------
+# Individual Company Page (Wen Shan's Code)
+--------------------------------------------------------------*/
+#individual-company {
+  background-color: #E8FFFD;
+}
+#company-logo {
+  float: left;
+  margin-top: 4%;
+  margin-left: 5%;
+}
+#company-desc {
+  float: left;
+  margin-top: 4%;
+  margin-left: 5%;
+  width: 47%;
+  padding-top: 1%;
+  padding-left: 2%;
+}
+#company-desc h5, #company-desc p, #company-desc h1, #participate h1{
+  color: #6264D9;
+}
+  
+#individual-company h1{
+  text-transform: uppercase;
+  font-size: 28px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+#term-background {
+  background: #1CE7EA;
+  margin-left: 5%;
+  padding: 2%;
+  width: 60%;
+  float: left;
+}
+#term-container {
+  overflow: auto;
+}
+  #term-details th {
+    text-transform: uppercase;
+    padding: 50px 10px;
+    width: 30%;
+    color: #A55CE6;
+    font-size: 18px;
+  }
+  #term-details td {
+    padding: 30px 15px 30px 25px;
+    width: 70%;
+    color: #6264D9;
+    font-size: 16px;
+  }
+  #participate {
+    width: 27%;
+    float: right;
+    margin-left: 1%;
+    margin-right: 5%;
+    padding: 2%;
+    color: #A55CE6;
+    font-size: 16px;
+    background: white;;
+  }
+  #participate h2 {
+    color: #A55CE6;
+    font-size: 18px;
+  }
+  
+  #participate h1 {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  #participate .btn-get-started {
+    width: 280px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  #view-in-context {
+    width: 60%;
+    margin-left: 5%;
+  }
+  #term-content {
+  padding: 60px;
+  color: #E5E5E5;
+  line-height: 1.6em;
+  background: #FFFFFF;
+  }
+  #term-content .emphasis {
+  color: #A55CE6;
+  font-weight: bold;
+ }
+  
+#important-terms {
+  display: flex;
+  justify-content: space-evenly;
+}
+ 
+/*--------------------------------------------------------------
+# Timeline on index page
+--------------------------------------------------------------*/
+.timeline * {
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container-timeline {
+  padding: 25px 20px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container-timeline::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: white;
+  border: 4px solid #6264D9;
+  top: 50px;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+/* Place the container to the left */
+.left-tl {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right-tl {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left-tl::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 27px;
+  width: 0;
+  z-index: 1;
+  right: 0px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #6264D9;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-tl::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 27px;
+  width: 0;
+  z-index: 1;
+  left: 130px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #6264D9 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right-tl::after {
+  left: -12px;
+}
+
+/* The actual content */
+.content-timeline {
+  padding: 20px 15px;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* The actual content */
+.content-timeline-right {
+  padding: 20px 150px;
+  position: relative;
+  border-radius: 6px;
+}
+
+.timeline h2 {
+  color: #969696;
+  font-size: 22px;
+  font-weight: normal;
+  padding-top: 2px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container-timeline {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container-timeline::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left-tl::after, .right-tl::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right-tl {
+  left: 0%;
+  }
+}

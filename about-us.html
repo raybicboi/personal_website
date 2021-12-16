@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- jquery refactor link -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+
+<body>
+
+  <!-- ======= Nav Bar Section & Head Tag files imported from another file ======= -->
+  <div id="nav-placeholder"></div>
+  <script>
+      $.get("navBar.html", function(data){
+          $("#nav-placeholder").replaceWith(data);
+      });
+  </script> 
+
+  <section id="about-us">
+    <div id="team-info">
+      <h3 data-aos="fade-in">About Us</h3>
+      </br>
+      <p> 
+        This project was led by <a href="http://www.cs.cmu.edu/~jasonh/" target="_blank">Jason Hong</a>. 
+        Annabel Sun and Bruce Xingyu Liu did the bulk of the work in developing
+        the method, collecting data from the crowd, and analyzing
+        the results. This web site was designed and built by
+        Raymond Li, Wen Shan Jiang, and Stacy Kellner. 
+        </br>
+        </br>
+        There have also been many other students who have helped
+        with data analysis or refining our models, including Angelia,
+        Arpita Agrawal, Chaiwut Chaianuchittrakul, Lu Chen, Jonathan Dinu, Jineet Doshi, 
+        Shawn Hanna, Brandon Jiang, Jennifer Kong, Siddharth Nair, Rajat Pandey, 
+        Alex Sciuto, Kunal Sekhri, Seoyeon Sim, Sarah Shy, Weijia Sun.
+        </br>
+        </br>
+        This research was funded in part by the National Science Foundation
+        (CNS-1422018). The views and conclusions contained in this web site
+        are those of the authors and should not be interpreted as representing
+        the official policies, either expressly or implied, of the National
+        Science Foundation or the U.S. Government.
+        <!-- We are researchers and designers at Carnegie Mellon University that do work in usable privacy and security.
+        Check out <a href="http://privacygrade.org" target="_blank">related work</a> by our <a href="https://github.com/CMUChimpsLab" target="_blank">research group</a>.
+        <br><br>Research Lab Lead: <a href="http://www.cs.cmu.edu/~jasonh/" target="_blank">Jason Hong</a>
+        <br>ML Model: Bruce Liu
+        <br>Website Design & Implementation: <a href="https://sskellner.github.io/portfolio/" target="_blank">Stacy Kellner</a> -->
+      </p>
+      </br></br>
+      <!-- <p> Have a question about ClearTerms? We're here to help and answer them. Please fill out the form and we will be in touch.</p>
+      <fieldset id= "contact-us">
+        </br>
+        <h4> Contact Us </h4>
+        </br>
+        <label> Full Name <span> * </span></br>
+          <input type="text" name="full-name" />
+        </label></br>
+        <label> Email <span> * </span></br>
+          <input type="text" name="email" />
+        </label></br>
+        <label> Message <span> * </span></br>
+          <textarea id="msg"> </textarea>
+        </label></br>
+        </br>
+        <input type="submit" class="btn-submit" value="Submit">
+      </fieldset> -->
+      <p>Have a question about ClearTerms? <a href="mailto:cleartermscontact@gmail.com">Contact Us.</a></p>
+    </div>
+    
+  </section>
+
+
+  <!-- ======= Footer & JS files + Firebase imported from another file ======= -->
+  <div id="footer-placeholder"></div>
+  <script>
+    $.get("footer.html", function(data){
+      $("#footer-placeholder").replaceWith(data);
+    });
+  </script>
+
+  <!-- Top of page arrow -->
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  
+    <!-- slick slider -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  
+  <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <!-- Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+  <!-- END FIREBASE -->
+  
+  </body>
+  
+  </html>
+  
