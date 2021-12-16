@@ -19,7 +19,7 @@ for (i = 0; i < acc.length; i++) {
       // $('.single-item').slick();
       $('.centermode-slick').slick({
         centerMode: true,
-        centerPadding: '100px',
+        centerPadding: '75px',
         slidesToShow: 3,
         responsive: [
           {
